@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> -->
+    <link rel="stylesheet" href="/leaflet.css">
+    <link rel="stylesheet" href="/index.css">
+    <!-- <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> -->
+    <title>Lê Chân</title> 
+</head>
+<body>
+    <div id="map"></div>
+    <div class="controls">
+        <div class="control-group">
+            <label for="move-by">Phương tiện:</label>
+            <select id="move-by" onchange="moveby(this.value)">
+                <option disabled selected value="">Chọn Phương tiện </option>
+                <option value="foot">Đi bộ</option>   
+                <option value="motorcycle">Xe Máy</option>   
+                <option value="motorcar">Ô tô</option>   
+            </select>
+            <div id="move-by-message" class="error-message d-none">Bạn chưa chọn phương tiện di chuyển</div>
+        </div>
+        <div class="control-group">
+            <label for="start-place">Điểm bắt đầu:</label>
+            <input type="text" id="start-place" placeholder="Nhập điểm bắt đầu">
+            <div id="start-place-suggestions" class="suggestions"></div>
+            <div id="start-place-message" class="error-message d-none">Bạn chưa chọn điểm bắt đầu</div>
+        </div>
+        <!-- <div class="control-group">
+            <label for="end-placetype">Loại Điểm đến:</label>
+            <select id="end-placetype" onchange="end_placetype_search(this.value)">  
+                <option disabled selected value="">Chọn loại điểm đến</option>
+                <option value="hospital">Bệnh viện</option>   
+                <option value="clinic">Phòng khám</option>   
+                <option value="police">Công An</option>   
+                <option value="fuel">Trạm Xăng</option>   
+                <option value="atm">ATM</option>   
+                <option value="bank">Ngân hàng</option>   
+                <option value="post_office">Bưu điện</option>   
+                <option value="school">Trường học</option>   
+                <option value="marketplace">Chợ</option>    
+                <option value="supermarket">Siêu thị</option>   
+                <option value="cinema">Rạp chiếu phim</option>   
+                <option value="cafe">Cà Phê</option>   
+            </select>
+        </div> -->
+        <div class="control-group">
+            <label for="end-place">Điểm đến:</label>
+            <input type="text" id="end-place" placeholder="Nhập điểm đến">
+            <div id="end-place-suggestions" class="suggestions"></div>
+            <div id="end-place-message" class="error-message d-none">Bạn chưa chọn điểm đến</div>
+        </div>
+        <button id="search">Tìm đường đi</button>
+        <p id="result">Kết quả:</p>
+    </div>
+    <script src="/leaflet.js"></script>
+    <script src="/index.js"></script>
+</body>
+</html>

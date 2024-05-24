@@ -94897,6 +94897,16 @@
         "name": "Aeon Mall",
         "amenity": "supermarket"
       }
+    },
+    {
+      "type": "node",
+      "id": 11031819821,
+      "lat": 20.838707537367643,
+      "lon": 106.68786848093238,
+      "tags": {
+        "amenity": "university",
+        "name": "Đại học Quản lý và Công nghệ Hải Phòng"
+      }
     }
   ]
 }

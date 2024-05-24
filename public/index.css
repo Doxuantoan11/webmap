@@ -1,0 +1,99 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Sử dụng font chữ Arial hoặc font chữ sans-serif mặc định */
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.controls {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9); /* Background mờ trắng */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.control-group {
+    margin-bottom: 15px; /* Tăng khoảng cách giữa các nhóm control */
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select,
+input[type="text"],
+button {
+    width: 100%;
+    padding: 10px; /* Tăng kích thước padding */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Tăng độ cong của border */
+    font-size: 16px; /* Tăng kích thước font */
+    transition: border-color 0.3s ease; /* Hiệu ứng khi focus */
+}
+
+select:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff; /* Màu khi focus */
+}
+
+select option {
+    padding: 8px; /* Tăng khoảng cách giữa các option */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+button:hover {
+    background-color: #919aa4; /* Màu khi hover */
+}
+
+.error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Ẩn đi mặc định */
+.d-none {
+    display: none;
+}
+
+/* Thêm CSS cho ô input điểm đến */
+input[type="text"] {
+    max-width: calc(100% - 22px); /* Giới hạn chiều rộng tối đa của ô input (100% - 22px để tránh bị tràn ra ngoài ô) */
+}
+.suggestions {
+    border: 1px solid #ccc;
+    border-top: none; 
+    border-bottom: none; 
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  .suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+  }
+  .suggestion-item:hover {
+    background-color: #f0f0f0;
+  }
+  
